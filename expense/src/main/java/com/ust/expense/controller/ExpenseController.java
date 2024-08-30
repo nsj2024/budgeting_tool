@@ -64,9 +64,9 @@ public class ExpenseController {
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
-    @GetMapping( "/budgetsummary")
+    @GetMapping("/budgetsummary")
     public ResponseEntity<Map<String, String>> getBudgetSummary() {
         Map<String, String> budgetSummary = expenseService.getRemainingBudgetAndPercentage();
-        return new ResponseEntity<Map<String,String>>(budgetSummary, HttpStatus.OK);
+        return new ResponseEntity<Map<String, String>>(budgetSummary, HttpStatus.OK);
     }
 }
